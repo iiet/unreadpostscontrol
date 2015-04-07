@@ -1,0 +1,36 @@
+<!-- INCLUDE ucp_header.html -->
+
+<form id="ucp" method="post" action="{S_UCP_ACTION}"{S_FORM_ENCTYPE}>
+
+<h2>{L_TITLE}</h2>
+
+<div class="panel">
+	<div class="inner">
+		<p>{L_UNREAD_POSTS_CONTROL}</p>
+		
+		<fieldset>
+		<!-- IF ERROR --><p class="error">{ERROR}</p><!-- ENDIF -->
+		<dl>
+			<dt><label for="includeforumsmode0">{L_UNREAD_POSTS_CONTROL_MODE}{L_COLON}</label></dt>
+			<dd>
+				<label for="includeforumsmode0"><input type="radio" name="includeforumsmode" id="includeforumsmode0" value="0"<!-- IF not S_INCLUDE_FORUMS_MODE --> checked="checked"<!-- ENDIF --> /> {L_UNREAD_POSTS_CONTROL_EXCLUDE_MODE}</label> 
+				<label for="includeforumsmode1"><input type="radio" name="includeforumsmode" id="includeforumsmode1" value="1"<!-- IF S_INCLUDE_FORUMS_MODE --> checked="checked"<!-- ENDIF --> /> {L_UNREAD_POSTS_CONTROL_INCLUDE_MODE}</label>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="search_forum">{L_UNREAD_POSTS_CONTROL_FORUMS}{L_COLON}</label><br /><span>{L_UNREAD_POSTS_CONTROL_FORUMS_EXPLAIN}</span></dt>
+			<dd><select name="fid[]" id="search_forum" multiple="multiple" size="8" title="{L_UNREAD_POSTS_CONTROL_FORUMS}">{S_FORUM_OPTIONS}</select></dd>
+		</dl>
+		</fieldset>
+		
+	</div>
+</div>
+
+<fieldset class="submit-buttons">
+	{S_HIDDEN_FIELDS}<input type="reset" value="{L_RESET}" name="reset" class="button2" />&nbsp; 
+	<input type="submit" name="submit" value="{L_SUBMIT}" class="button1" />
+	{S_FORM_TOKEN}
+</fieldset>
+</form>
+
+<!-- INCLUDE ucp_footer.html -->

@@ -1,0 +1,9 @@
+services:
+    iiet.unreadpostscontrol.listener:
+        class: iiet\unreadpostscontrol\event\listener
+        arguments:
+            - @dbal.conn
+            - %core.table_prefix%
+            - @user
+        tags:
+            - { name: event.listener }

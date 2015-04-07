@@ -13,3 +13,7 @@ While in your phpBB root directory, invoke the following command:
     git clone https://github.com/mkwm/unreadpostscontrol ext/iiet/unreadpostscontrol
 
 and then enable "Unread posts control" module in ACP -> Customise.
+
+## Bugs
+
+Yes.

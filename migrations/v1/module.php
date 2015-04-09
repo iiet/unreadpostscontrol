@@ -44,7 +44,10 @@ class module extends \phpbb\db\migration\migration
 					'module_basename' => '\iiet\unreadpostscontrol\ucp\unread_posts_control_module',
 					'modes' => array('unread_posts_control')
 				)
-			))
+			)),
+			array('module.remove', array(
+				'ucp', 0, 'UCP_MAIN_IGNORED'
+			)),
 		);
 	}
 }

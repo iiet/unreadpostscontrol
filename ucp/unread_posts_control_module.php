@@ -56,7 +56,7 @@ class unread_posts_control_module
 			{
 				$sql_ary['user_id'] = $user->data['user_id'];
 				$sql = 'INSERT INTO ' . $table_prefix . 'unreadposts_users' .
-				$db->sql_build_array('INSERT', $sql_Ary);
+				$db->sql_build_array('INSERT', $sql_ary);
 				$db->sql_query($sql);
 			}
 			
